@@ -22,14 +22,16 @@ sudo mkdir -p /repo
 
 Copy all your RPM files into this directory:
 
-Ensure that the /repo directory and its contents are readable by all users. You can set appropriate permissions using:
 
 ```
 sudo cp /path/to/your/rpms/*.rpm /repo/
 ```
 
-sudo chmod -R 755 /repo
+Ensure that the /repo directory and its contents are readable by all users. You can set appropriate permissions using:
 
+```
+sudo chmod -R 755 /repo
+```
 
 Install the createrepo package:
 
