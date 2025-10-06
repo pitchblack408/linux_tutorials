@@ -69,6 +69,34 @@ sudo yum install package-name
 
 This approach ensures that dependencies are resolved automatically and packages are installed in the correct order.
 
+## *Additional Notes*
+Updating the Repository
+If you add new RPMs to the /repo directory later, you need to regenerate the repository metadata:
+
+```
+sudo createrepo --update /repo
+```
+
+Verifying the Repository
+You can verify that your local repository is working by listing the available packages:
+
+```
+yum list available --disablerepo="*" --enablerepo="local"
+```
+
+Or with dnf:
+
+```
+dnf list available --disablerepo="*" --enablerepo="local"
+```
+
+Permissions
+Ensure that the /repo directory and its contents are readable by all users. You can set appropriate permissions using:
+
+```
+sudo chmod -R 755 /repo
+```
+
 # *Alternative Solutions When a Repository Is Not Possible*
 If creating a repository is not feasible, there are two other recommended approaches:
 
