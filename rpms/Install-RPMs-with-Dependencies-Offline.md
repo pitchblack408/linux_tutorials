@@ -69,7 +69,7 @@ sudo yum install package-name
 
 This approach ensures that dependencies are resolved automatically and packages are installed in the correct order.
 
-## *Additional Notes*
+## *Use a Repository Additional Notes*
 Updating the Repository
 If you add new RPMs to the /repo directory later, you need to regenerate the repository metadata:
 
