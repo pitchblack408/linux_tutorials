@@ -12,7 +12,21 @@ This makes manual installation challenging, especially when dealing with multipl
 The best way to handle dependencies is to add the RPMs to a repository (local or remote) and use a package manager like yum or dnf. These tools automatically resolve dependencies and install packages in the correct order.
 
 Steps to Create a Local Repository:
-Place all RPMs in a directory (e.g., /repo).
+
+Place All RPMs in a Directory
+Choose a directory to store all your RPM files. For example, /repo. You can create this directory if it doesn't already exist:
+
+```
+sudo mkdir -p /repo
+```
+
+Copy all your RPM files into this directory:
+
+```
+sudo cp /path/to/your/rpms/*.rpm /repo/
+```
+
+
 Install the createrepo package:
 
 ```
